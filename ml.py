@@ -25,8 +25,8 @@ def extract_data():
             if df.count() > 0:
                 return df
         except Exception as e:
-            print(f"⏳ Waiting for Cassandra... ({i+1}/20)")
-    print("❌ Cassandra is not available. Exiting.")
+            print(f"Waiting for Cassandra... ({i+1}/20)")
+    print("Cassandra is not available. Exiting.")
     exit()
 
 # Transform Data (Convert to Pandas for ML Processing)
@@ -64,7 +64,7 @@ if __name__ == "__main__":
         kommun_df = df[df['kommun_code'] == kommun]
 
         if kommun_df.shape[0] < 2:
-            print(f"⚠️ Not enough data for kommun_code {kommun}. Skipping.")
+            print(f"Not enough data for kommun_code {kommun}. Skipping.")
             continue
 
         # Prepare features and target variable
@@ -100,7 +100,7 @@ if __name__ == "__main__":
         plt.legend()
         plt.grid()
         plt.savefig(f"/app/prediction_{kommun}.png")
-        print(f"✅ Prediction plot saved as /app/prediction_{kommun}.png")
+        print(f"Prediction plot saved as /app/prediction_{kommun}.png")
 
     # Combine all predictions into one DataFrame
     final_predictions = pd.concat(all_predictions, ignore_index=True)
@@ -108,8 +108,8 @@ if __name__ == "__main__":
     # Print the predictions for all kommun_codes
     print("\n📊 Final Predictions:")
     print(final_predictions)
-    print("\n📢 All predictions have been saved as image files in the /app/ directory!")
-    print("🔹 To copy them from the Docker container to your local machine, run:")
-    print("    docker cp python_pipeline:/app/prediction_<komun_dode>.png .")
-    print("    open prediction_076.png    # (MacOS) Open the image")
+    print("\nAll predictions have been saved as image files in the /app/ directory!")
+    print("To copy them from the Docker container to your local machine, run:")
+    print("docker cp python_pipeline:/app/prediction_<komun_dode>.png .")
+    print("start prediction_<komun_dode>.png")
 
