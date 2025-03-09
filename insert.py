@@ -14,7 +14,7 @@ def connect_to_cassandra(max_retries=30, retry_delay=5):
             print(f"Cassandra not ready yet... retrying ({i+1}/{max_retries})")
             time.sleep(retry_delay)
     
-    print("❌ Failed to connect to Cassandra after multiple attempts. Exiting.")
+    print("Failed to connect to Cassandra after multiple attempts. Exiting.")
     exit()
 
 # Connect to Cassandra
