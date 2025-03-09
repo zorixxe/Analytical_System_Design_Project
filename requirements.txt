@@ -1,0 +1,7 @@
+requests
+cassandra-driver
+pyspark
+pandas
+scikit-learn
+matplotlib
+numpy

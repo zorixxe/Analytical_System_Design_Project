@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      DataStax &nbsp;|&nbsp; Downloads &nbsp;|&nbsp; Apache Cassandra and
+      DataStax Enterprise - Error 404
+    </title>
+    <link
+      rel="stylesheet"
+      href="/styles/main.css"
+      type="text/css"
+      media="screen"
+    />
+
+    <script
+      src="//code.jquery.com/jquery-3.4.0.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '\n <script src="/js/libs/jquery-3.4.0.min.js"><\/script>'
+        );
+    </script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5FSG7Q");
+    </script>
+    <script type="text/javascript">
+      (function () {
+        var didInit = false;
+        function initMunchkin() {
+          if (didInit === false) {
+            didInit = true;
+            Munchkin.init("259-IFZ-779");
+          }
+        }
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "//munchkin.marketo.net/munchkin.js";
+        s.onreadystatechange = function () {
+          if (this.readyState == "complete" || this.readyState == "loaded") {
+            initMunchkin();
+          }
+        };
+        s.onload = initMunchkin;
+        document.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5FSG7Q"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!--  /  -->
+
+    <!-- Header -->
+    <header class="header">
+      <a class="logo" href="https://www.datastax.com">
+        <svg
+          width="168"
+          height="16"
+          viewBox="0 0 168 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_7_29)">
+            <g clip-path="url(#clip1_7_29)">
+              <path
+                d="M100.636 2.76735V0H87.6383L84.1086 2.76735V6.56742L87.6383 9.33477H98.9664V13.2355H84.8106V16H98.1597L101.689 13.2355V9.33477L98.1597 6.56742H86.8316V2.76735H100.636Z"
+                fill="white"
+              />
+              <path
+                d="M32.6001 0H30.1205L21.0258 16H24.1706L31.366 3.34556L38.5529 16H41.6948L32.6001 0Z"
+                fill="white"
+              />
+              <path
+                d="M59.6352 0H42.0543V2.76735H49.4847V16H52.2049V2.76735H59.6352V0Z"
+                fill="white"
+              />
+              <path
+                d="M123.638 0H106.06V2.76735H113.487V16H116.21V2.76735H123.638V0Z"
+                fill="white"
+              />
+              <path
+                d="M14.0511 0H0V16H14.0511L17.5809 13.2327V2.76735L14.0511 0ZM2.72304 2.76735H14.8578V13.2355H2.72304V2.76735Z"
+                fill="white"
+              />
+              <path
+                d="M155.794 8L154.22 5.23265V5.23553L151.245 0H148.1L152.649 8L148.1 16H151.245L154.22 10.7674L155.794 8Z"
+                fill="white"
+              />
+              <path
+                d="M160.266 8L161.84 5.23265V5.23553L164.818 0H167.96L163.414 8L167.96 16H164.818L161.84 10.7674L160.266 8Z"
+                fill="white"
+              />
+              <path
+                d="M69.0894 0H71.569L80.6638 16H77.519L70.3236 3.34556L63.1367 16H59.9947L69.0894 0Z"
+                fill="white"
+              />
+              <path
+                d="M133.092 0H135.572L144.667 16H141.525L134.326 3.34556L127.142 16H123.997L133.092 0Z"
+                fill="white"
+              />
+            </g>
+          </g>
+          <defs>
+            <clipPath id="clip0_7_29">
+              <rect width="168" height="16" fill="white" />
+            </clipPath>
+            <clipPath id="clip1_7_29">
+              <rect width="167.96" height="16" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+
+      <button class="mobile-toggler" type="button" title="Open Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav>
+        <span class="nav-divider">|</span>
+<a href="/">Downloads</a>
+      </nav>
+
+      <nav class="secondary">
+        <a href="https://docs.datastax.com/en/home/docs/index.html">Docs</a>
+        <a href="https://www.datastax.com/contact-us">Contact Us</a>
+        <a href="https://astra.datastax.com/">Sign In</a>
+        <a href="https://astra.datastax.com/signup">Try For Free</a>
+      </nav>
+    </header>
+    <!-- End Header -->
+
+    <main class="error-pages">
+      <section class="hero">
+        <h1>Error 404 (Not Found)</h1>
+      </section>
+      <section class="download" style="display: block">
+        <h2 class="download-title">
+          You tried to access a web page but it couldn't be found; it may have
+          moved, been deleted or never existed in the first place.
+        </h2>
+        <div class="download-description">
+          Head back to the
+          <a
+            title="Datastax Downloads Portal"
+            href="https://downloads.datastax.com"
+            >DataStax Downloads Portal</a
+          >
+          to get back on track.
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="/js/main.js"></script>
+  <script type="text/javascript"></script>
+</html>

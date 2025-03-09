@@ -1,0 +1,77 @@
+version: '3.8'
+services:
+  cassandra:
+    image: cassandra:latest
+    container_name: cassandra_db
+    ports:
+      - "9042:9042"
+    networks:
+      - my_network
+    volumes:
+      - cassandra_data:/var/lib/cassandra
+  spark:
+    image: bitnami/spark:latest
+    container_name: spark_cluster
+    ports:
+      - "8080:8080"
+      - "7077:7077"
+    networks:
+      - my_network
+    depends_on:
+      - cassandra
+    environment:
+      - SPARK_MODE=master
+    volumes:
+      - .:/opt/bitnami/spark/workdir
+      - ./spark-cassandra-connector_2.12-3.2.0.jar:/opt/bitnami/spark/jars/spark-cassandra-connector_2.12-3.2.0.jar
+
+  jupyter:
+    image: jupyter/scipy-notebook:latest
+    container_name: jupyter_lab
+    ports:
+      - "8888:8888"
+    networks:
+      - my_network
+    volumes:
+      - .:/home/jovyan/work
+    depends_on:
+      - spark
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:latest
+    container_name: mlflow_server
+    ports:
+      - "5000:5000"
+    networks:
+      - my_network
+    volumes:
+      - mlflow_data:/mlruns
+    command: mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri sqlite:///mlflow.db --default-artifact-root /mlruns
+
+  python_app:
+    build: .
+    container_name: python_pipeline
+    networks:
+      - my_network
+    depends_on:
+      - cassandra
+      - spark
+    volumes:
+      - .:/app
+    environment:
+      - KOMMUN_CODE=all  # Change this dynamically
+    command: >
+      sh -c "
+      python fetch.py &&
+      sleep 10 &&
+      python insert.py &&
+      sleep 5 &&
+      python ml.py
+      "
+networks:
+  my_network:
+    driver: bridge
+
+volumes:
+  cassandra_data:
+  mlflow_data:
